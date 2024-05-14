@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTP Generation Page</title>
+    <script type="text/javascript">
+        function generateOTP() {
+            // Generate a random 6-digit OTP
+            var otp = Math.floor(100000 + Math.random() * 900000);
+            document.getElementById("otp").value = otp;
+        }
+
+        function validateOTP() {
+            var inputOTP = document.getElementById("inputOTP").value;
+            var generatedOTP = document.getElementById("otp").value;
+
+            if (inputOTP === generatedOTP) {
+                alert("OTP is valid. Access granted!");
+            } else {
+                alert("Invalid OTP. Please try again.");
+            }
+        }
+    </script>
+    <style>
+      h1{
+        text-align: center;
+        font-family:fantasy;
+        font-size: 50px;
+      }
+    </style>
+</head>
+<body>
+    <h1>OTP Generation Page</h1>
+    <button onclick="generateOTP()">Generate OTP</button>
+    <br><br>
+    Generated OTP: <input type="text" id="otp" readonly>
+    <br><br>
+    Enter OTP: <input type="text" id="inputOTP"><br><br>
+    <button onclick="validateOTP()">Validate OTP</button>
+</body>
+</html>

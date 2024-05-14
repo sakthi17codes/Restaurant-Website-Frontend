@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Example</title>
+<style>
+  body {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('vali.jpeg'); 
+    background-size: cover;
+    background-color:white;
+  }
+  #form-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+<div id="form-container">
+  <form id="registration-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" required><br><br>
+    <label for="password">Password </label>
+    <input type="password" id="password" required><br><br>
+    <label for="phn">Phone :</label>
+    <input type="tel" id="phn" pattern="[0-9]{10}" required><br><br>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('registration-form').addEventListener('submit', function(event) {
+    const passwordInput = document.getElementById('password');
+    const nameInput = document.getElementById('name');
+    const phnInput = document.getElementById('phn');
+
+    if (passwordInput.value.length < 8 || passwordInput.value[0] !== passwordInput.value[0].toUpperCase()) {
+      event.preventDefault();
+      alert('Password must be 8 characters long and start with a capital letter.');
+    }
+
+    if (phnInput.value.length !== 10 || isNaN(phnInput.value)) {
+      event.preventDefault();
+      alert('Phone number must be 10 digits.');
+    }
+  });
+</script>
+</body>
+</html>
