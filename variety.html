@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Item Details</title>
+    <style>
+        .food-item {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px; /* Add space between items */
+        }
+
+        .food-details {
+            flex-grow: 1; /* Allows food-details to take up remaining space */
+        }
+
+        .food-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .price-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .currency {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .amount {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .quantity-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity-label {
+            margin-right: 10px;
+        }
+
+        .quantity-input {
+            width: 50px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/Users/sivakumarramalingam/Sakthi Codes/project/images/berger.jpg" alt="Cheese Burger" width="170" height="170">
+    <div class="food-item">
+        <div class="food-details">
+            <div class="food-name">Cheese Burger</div>
+            <div class="price-box">
+                <span class="currency">Rs.</span>
+                <span class="amount">90</span>
+            </div>
+        </div>
+        <div class="quantity-box">
+            <label for="quantity-burger" class="quantity-label">Quantity:</label>
+            <input type="number" id="quantity-burger" class="quantity-input" min="1" max="10" value="1">
+        </div>
+    </div>
+
+    <img src="/Users/sivakumarramalingam/Sakthi Codes/project/images/cheese-fries.jpg" alt="Cheese Fries" width="170" height="170">
+    <div class="food-item">
+        <div class="food-details">
+            <div class="food-name">Cheese Fries</div>
+            <div class="price-box">
+                <span class="currency">Rs.</span>
+                <span class="amount">120</span>
+            </div>
+        </div>
+        <div class="quantity-box">
+            <label for="quantity-fries" class="quantity-label">Quantity:</label>
+            <input type="number" id="quantity-fries" class="quantity-input" min="1" max="10" value="1">
+        </div>
+    </div>
+
+    <img src="/Users/sivakumarramalingam/Sakthi Codes/project/images/pizza.jpg" alt="Pizza" width="170" height="170">
+    <div class="food-item">
+        <div class="food-details">
+            <div class="food-name">Pizza</div>
+            <div class="price-box">
+                <span class="currency">Rs.</span>
+                <span class="amount">200</span>
+            </div>
+        </div>
+        <div class="quantity-box">
+            <label for="quantity-pizza" class="quantity-label">Quantity:</label>
+            <input type="number" id="quantity-pizza" class="quantity-input" min="1" max="10" value="1">
+        </div>
+    </div>
+
+    <p style="font-size: 30px; text-align: center;">
+        <a href="Payment.html">Payment</a>
+    </p>
+</body>
+</html>

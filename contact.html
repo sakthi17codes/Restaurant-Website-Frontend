@@ -5,74 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
-        
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
             margin: 0;
             padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        .navbar {
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        font-family: fantasy;
-      }
-      
-      .navbar a {
-        float: left;
-        display: block;
-        color: black;
-        padding: 14px 16px;
-        font-size: 17px;
-      }
-      
-      .navbar a:hover {
-        background: #ddd;
-        color:brown;
-      }
-        .container {
-            width: 50%;
-            margin: auto;
-            background-color: white;
-            padding: 50px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .contact-container {
+            background-color: #fff;
             border-radius: 8px;
-            margin-top: 50px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
         }
-        h2 {
-            text-align: center;
+        .contact-container h1 {
+            margin-top: 0;
+            font-size: 24px;
             color: #333;
         }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
+        .contact-container label {
             display: block;
-            color: #666;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-weight: bold;
         }
-        input, textarea {
+        .contact-container input[type="text"],
+        .contact-container input[type="email"],
+        .contact-container textarea {
             width: 100%;
             padding: 10px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            box-sizing: border-box;
         }
-        textarea {
+        .contact-container textarea {
             resize: vertical;
+            height: 150px;
         }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
+        .contact-container button {
+            background-color: #4caf50;
             color: white;
+            padding: 10px 15px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
         }
-        button:hover {
-            background-color: #218838;
+        .contact-container button:hover {
+            background-color: #45a049;
+        }
+        .navbar {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Optional: to make the navbar semi-transparent */
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            font-size: 17px;
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
         }
     </style>
 </head>
@@ -81,28 +90,22 @@
         <a href="home.html">Home</a>
         <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
-        
         <a href="menu.html">Menu</a>
-      </div>
-      <br>
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form >
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit">Submit</button>
+    </div>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
         </form>
     </div>
-
 </body>
 </html>
